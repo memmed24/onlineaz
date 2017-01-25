@@ -1,0 +1,400 @@
+body, div, dl, h5, html, p, ul {
+ margin: 0;
+ padding: 0;
+}
+html, body {
+ height: 100%;
+}
+body {
+ background: #fff;
+ color: #4b565c;
+ font: 70% arial, sans-serif;
+ min-width: 1000px;
+}
+img{
+ border: none
+}
+input{
+ border:solid 1px #aacfe4;
+}
+textarea{
+ border:solid 1px #aacfe4;
+ resize: none;
+}
+
+a {
+ color: #5085a0;
+}
+a.more { cursor: pointer; text-decoration: none; display: inline-block; padding: 3px 10px; font-size: 12px; font-weight: bold; color: #FFFFFF; background: #2B404B }
+a.more :hover {  cursor: pointer; background: #00A1DE; text-decoration: none }
+
+a.add_to_cart { cursor: pointer; text-decoration: none; display: inline-block; padding: 3px 10px; font-size: 12px; font-weight: bold; color: #FFFFFF; background: #2B404B }
+a.add_to_cart :hover {  cursor: pointer; background: #00A1DE; text-decoration: none }
+
+
+li {
+ list-style: none;
+}
+.blck_1 {
+ border: 1px solid #d0d6dd;
+ border-width: 0 1px 1px;
+ height: auto !important;
+ height: 35px;
+ margin: 0 0 20px;
+ min-height: 35px;
+ font-size: 12px;
+ padding: 0 0 12px;
+ position: relative;
+}
+.blck_1 .title, .basket_title {
+ background: #2B404B url(/images/design/dom-sad/bg_blck_1.png) 0 0 repeat-x;
+ color: #fff;
+ font-size: 1.2em;
+ font-weight: bold;
+ height: auto !important;
+ height: 22px;
+ min-height: 22px;
+ margin: 0 -1px 12px;
+ padding: 8px 0 0 15px;
+ position: relative;
+
+}
+
+.blck_1 .wrap {
+ margin: 0 15px;
+ position: relative;
+}
+.content {
+ font-size: 1.25em;
+ margin: 0 20px;
+ min-height: 1px;
+ position: relative;
+}
+.content a:hover {
+ text-decoration: none;
+}
+.content p {
+ line-height: 1.2em;
+ font-siZE:12px
+}
+.content .links li a:hover {
+ border-width: 0;
+}
+#body {
+ height:100%;
+ margin:0 auto;
+ position:relative;
+ width:1400px;
+ max-width:1250px; /* ----------- Если поставить 1600, то будет расширятся ----------- */
+}
+
+#breadcrumbs {
+ margin: 10px 220px 5px 300px;
+ position: relative;
+}
+#breadcrumbs li a:hover {
+ text-decoration: underline;
+}
+
+#center {
+ height: auto !important;
+ height: 10px;
+ margin: 0 220px 0 280px;
+ min-height: 10px;
+ position: relative;
+}
+#center .blck_1 .title {
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+#center .new_goods .title_5 {
+ background: #2B404B url(/images/design/dom-sad/bg_blck_1.png) 0 0 repeat-x;	
+ color: #fff;
+}
+#center .new_goods .title .lnk a:hover {
+ text-decoration: none;
+}
+#center .showcase .name a:hover {
+ text-decoration: none;
+}
+
+#center .special .wrap_m {
+ margin: 0 18px;
+ font-size: 12px;
+ position: relative;
+}
+#center .special .title_4 {
+ background: #ffd102 url(/images/design/dom-sad/bg_blck_1_t4.png) 0 0 repeat-x;
+ border-bottom: 3px solid #2d434e;
+ color: #2d434e;
+}
+#center .special .title .lnk {
+ float: right;
+ font: normal .8em tahoma, sans-serif;
+ position: absolute;
+ right: 20px;
+ top: 9px;
+ text-transform: none;
+}
+#center .special .title .lnk a:hover {
+ text-decoration: none;
+}
+#comparison .items .cart a:hover {
+ text-decoration: none;
+}
+#comparison .items .name a:hover {
+ text-decoration: none;
+}
+#comparison .submit a:hover {
+ text-decoration: none;
+}
+#footer {
+ height: 110px;
+ position: relative;
+ width: 100%;
+}
+
+a:hover{
+ text-decoration: none;	
+}
+
+#left {
+ float: left;
+ position: relative;
+ width: 260px;
+}
+#left .news dl {
+ font-family: tahoma, sans-serif;
+ margin: 0 15px;
+ position: relative;
+}
+#m_footer {
+ background: #243741 url(/images/design/dom-sad/bg_m_footer.png) 0 0 repeat-x;
+ height: auto !important;
+ height: 40px;
+ margin: 0 0 20px;
+ min-height: 40px;
+ position: relative;
+}
+#m_footer ul {
+ position: relative;
+ text-align: center;
+}
+#m_footer ul li {
+ color: #fff;
+ display: inline;
+ font-size: 1.1em;
+ font-weight: bold;
+ line-height: 40px;
+ padding: 0 10px;
+ position: relative;
+}
+#m_footer ul li a {
+ color: #fff;
+ text-decoration: none;
+}
+#m_footer ul li a:hover {
+ text-decoration: underline;
+}
+#m_left dd a:hover {
+ text-decoration: underline;
+}
+#m_left ul li a:hover {
+ background: url(/images/design/dom-sad/bg_m_left_sub.png) 0 0 repeat-x;
+ color: #2d434e;
+ margin: 0 -1px;
+ padding-left: 21px;
+ padding-right: 21px;
+ text-decoration: none;
+}
+
+#m_top {
+ background: #fff url(../images/mainpage/logo.png) no-repeat;
+ color:white;
+ height: 432px;
+ left: 0;
+ position: relative;
+ width: 100%;
+}
+
+#prefooter {
+ clear: both;
+
+}
+
+#right {
+ float: right;
+ position: relative;
+ width: 200px;
+}
+
+#right .cart a:hover {
+ text-decoration: none;
+}
+#right .schedule {
+ color: #989fa2;
+}
+#right .schedule h5 {
+ color: #4b565c;
+ font-size: 1.1em;
+}
+
+#right .schedule .title_3 {
+ background: #2B404B url(/images/design/dom-sad/bg_blck_12.png) 0 0 repeat-x;
+ color: #fff;
+}
+
+#right .schedule .title_3 {
+ background: #2B404B url(/images/design/dom-sad/bg_blck_12.png) 0 0 repeat-x;
+ color: #fff;
+}
+html>body #body {
+ height: auto;
+ min-height: 100%;
+}
+
+#static_nav {
+ list-style: none;
+ height: 37px;
+ margin: 0 auto
+}
+
+#static_nav li {
+ background: #2B404B;
+ margin:0 auto;
+ float: left;
+ border-right: solid 1px #D0D6DD;
+ height: 37px;
+}
+
+#static_nav li.firstitem {
+ border-left: solid 1px #D0D6DD;
+}
+
+#static_nav li a, #static_nav li a:link, #static_nav li a:visited {
+ text-decoration: none;
+ display: block;
+ float: left;
+ height: 37px;
+ color: white;
+ line-height: 37px;
+ padding: 0 10px 0 10px;
+ border-right: solid 1px #D0D6DD;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+ outline: none;
+}
+
+#static_nav li a:hover, #static_nav li a:focus, #static_nav li a:active {
+ background-color: #00A1DE;
+ color: #fff;}
+
+.product_img {
+ background:#D0D6DD; /* фон блока */
+ border: 2px #CCCCCC solid; /* стили рамки */
+ -moz-border-radius: 10px; /* закругление для старых Mozilla Firefox */
+ -webkit-border-radius: 10px; /* закругл. для старых Chrome и Safari */
+ -khtml-border-radius:10px; /* закругл. для браузера Konquerer системы Linux */
+ border-radius: 10px; /* закругление углов для всех, кто понимает */
+ padding: 3px; /* внутренние отступы */ 
+}
+
+/* ----------- Форма (поиск,инпуты и т.д) ----------- */
+#stylized input{
+ float:left;
+ font-size:12px;
+ border:solid 1px #aacfe4;
+ width:100px;
+}
+#stylized select{
+ float:left;
+ font-size:12px;
+ border:solid 1px #aacfe4;
+ width:auto;
+}
+#stylized td.label{
+ font-size:12px;
+}
+/* ----------- Конец Формы ----------- */
+
+/* ----------- Кнопки ----------- */
+.buy_button {
+ background-color:#2B404B;
+ -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+ border-radius:6px;
+ border:1px solid #268a16;
+ display:inline-block;
+ color:white;
+ font-family:arial;
+ font-size:15px;
+ font-weight:bold;
+ padding:6px 24px;
+ margin-top:3px;
+ text-decoration:none;
+ cursor: pointer;
+
+}.buy_button:hover {
+ background-color:#00A1DE;
+}
+/* ----------- Конец Кнопки ----------- */
+
+
+/* Товар успешно добавлен в корзину */
+.notice-wrap {
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ margin-top: -50px;
+ margin-left: -100px;
+ width: 250px;
+
+}
+
+* html .notice-wrap {
+ position: absolute;		
+}
+
+.notice-item {
+ height: 30px;
+ background: #2B404B;
+ -moz-border-radius: 6px;
+ -webkit-border-radius: 6px;
+ color: white;
+ padding: 6px 6px 0 6px;
+ font-family: Verdana;
+ font-size: 11px;
+ border: 2px solid #999;
+ display: block;
+ position: relative;
+ margin: 0 0 12px 0;
+}
+
+.notice-item-close {
+ position: absolute;
+ font-family: Arial;
+ font-size: 15px;
+ font-weight: bold;
+ right: 6px;
+ top: 6px;
+ cursor: pointer;
+}
+/* ------------------------------------------------- */
+.col_13 { width: 300px; font-size: 12px}
+.col_14 { margin-left: 350px; margin-top:-235px; width: 300px; font-size: 12px}
+
+.checkout input { border:solid 1px #aacfe4;margin-bottom: 15px; height: 20px; line-height: 18px; padding: 3px;}
+
+input.actions{
+ background-color: #2B404B;
+ color:white;
+ font-weight: bold;
+ font-size:12px;
+ padding:5px;
+ border:solid 1px #aacfe4;
+ width:140px;
+ height: auto;
+ cursor:pointer;
+}

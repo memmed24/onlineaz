@@ -1,0 +1,857 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+ <head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <title>WWW.HEDIYYEM.AZ</title>
+
+  <base href="http://oyuncaqci.com"/>
+
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+  <link href="css/slider.css" rel="stylesheet" type="text/css"/>
+
+  <script src="js/jquery-1.8.1.min.js"></script>
+
+  <script type="text/javascript" src="js/jquery.notice.js"></script>
+
+  <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+
+  <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+
+  <script type="text/javascript" src="js/jquery.form.js"></script>
+
+  
+
+  <script type="text/javascript">
+
+
+
+   function mycarousel_initCallback(carousel)
+
+   {
+
+    // Disable autoscrolling if the user clicks the prev or next button.
+
+    carousel.buttonNext.bind('click', function() {
+
+     carousel.startAuto(0);
+
+    });
+
+
+
+    carousel.buttonPrev.bind('click', function() {
+
+     carousel.startAuto(0);
+
+    });
+
+
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+
+    carousel.clip.hover(function() {
+
+     carousel.stopAuto();
+
+    }, function() {
+
+     carousel.startAuto();
+
+    });
+
+   }
+
+   ;
+
+
+
+   jQuery(document).ready(function() {
+
+    jQuery('#mycarousel').jcarousel({
+
+     auto: 5,
+
+     wrap: 'last',
+
+     initCallback: mycarousel_initCallback
+
+    });
+
+   });
+
+
+
+  </script>
+
+  <script type="text/javascript">
+
+   function add_to_cart(product_id) {
+
+    $.post("cart/backend/add_to_cart.php", {product_id: product_id}, update_cart);
+
+    jQuery.noticeAdd({
+
+     text: 'Uğurla səbətə daxil olundu',
+
+     stay: false
+
+    });
+
+   }
+
+   function update_cart() {
+
+    $.post("cart/backend/update_cart.php", {}, on_success);
+
+    function on_success(data)
+
+    {
+
+     $('#small_cart').html(data);
+
+    }
+
+   }
+
+   function remove_from_cart(product_id) {
+
+    $.post("cart/backend/remove_from_cart.php", {product_id: product_id}, update_cart_interface);
+
+   }
+
+   function update_product_count(product_id, count) {
+
+    $.post("cart/backend/update_product_count.php", {product_id: product_id, count: count}, update_cart_interface);
+
+   }
+
+   function update_cart_interface() {
+
+    $.post("cart/backend/cart_interface.php", {}, on_success);
+
+    function on_success(data)
+
+    {
+
+     $('#cart_interface').html(data);
+
+    }
+
+   }
+
+  </script>
+
+  <script type="text/javascript" >
+
+   $(document).ready(function() {
+
+
+
+    $(":submit").click(function() {
+
+     $("#preview").html('');
+
+     $("#current").hide();
+
+     $("#preview").html('<img src="images/ajax-loader.gif" alt="Подождите пожалуйста...."/>');
+
+     $("#ajaxform").ajaxForm({
+
+      target: '#preview'
+
+     });
+
+    });
+
+   });
+
+  </script>
+
+  <script language="javascript" type="text/javascript">
+
+   function clearText(field)
+
+   {
+
+    if (field.defaultValue == field.value)
+
+     field.value = '';
+
+    else if (field.value == '')
+
+     field.value = field.defaultValue;
+
+   }
+
+  </script>
+
+ </head>
+
+ <body>
+
+  <div id="body">
+
+   <div id="m_top">
+
+   </div>
+
+   <!-- breadcrumbs -->
+
+   <ul id="breadcrumbs" class="clearfix">
+
+    <!-- <li>&nbsp;</li> -->
+
+   </ul>
+
+   <!-- /breadcrubms -->
+
+   <!-- left -->
+
+   <div id="left">
+
+
+
+    <div class="blck_1 news">
+
+     <div class="title"><img src="images/mainpage/cart.png" width="15"/> Səbət</div>
+
+     <dl><div id="small_cart">
+ <li><a href="/basket" class="cart"><img src="images/mainpage/cart.png" width=17> Məhsullar: 2 əd. (41 AZN)</a></li></div></dl>
+
+    </div>
+
+
+
+    <div class="blck_1 news">
+
+     <div class="title">Kateqoriya</div>
+
+     <dl><style>
+ .harmonica-menu a, .harmonica-menu h3 {
+  display: block;
+  padding: 5px 5px 5px 15px;
+  color: #4B565C;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 0;
+ }
+
+ .harmonica-menu h3 {
+  background: url(../images/level-item.png) left center no-repeat;
+ }
+
+ .open {
+  background: url(../images/level-item2.png) left center no-repeat !important;
+ }
+
+ .harmonica-menu-hidden {
+  display: none;
+  padding: 5px 5px 5px 20px;
+ }
+
+ .harmonica-menu-hidden a {
+  font-weight: normal;
+  padding: 5px;
+ }
+</style>
+<script language="javascript" type="text/javascript">
+ $(document).ready(function() {
+  $('.harmonica-menu h3').click(function() {
+   $(this).next('.harmonica-menu-hidden').slideToggle();
+   $(this).toggleClass('open');
+  });
+ });
+</script>
+
+
+<div class="harmonica-menu">
+ <h3>SUVENİRLƏR</h3><div class='harmonica-menu-hidden'><a href='razdel/87'>Suvenirlər və Aksesuarlar</a></div><h3>SAATLAR</h3><div class='harmonica-menu-hidden'><a href='razdel/86'>Divar Saaatları </a><a href='razdel/106'>Stolüstü saatlar</a></div><h3>BİJUTERİYA</h3><div class='harmonica-menu-hidden'><a href='razdel/84'>Komplektlər </a><a href='razdel/108'>Bilərziklər</a><a href='razdel/109'>Sırğalar</a><a href='razdel/110'>Üzüklər</a><a href='razdel/111'>Boyunbağılar</a><a href='razdel/112'>Broşlar</a><a href='razdel/113'>Abadoklar</a><a href='razdel/114'>Breloklar</a><a href='razdel/115'>Klonlar</a><a href='razdel/117'>Cüzdanlar </a></div><h3> ŞƏKİL ÜÇÜN ÇƏRÇİVƏLƏR</h3><div class='harmonica-menu-hidden'><a href='razdel/120'>Sevgi ilə bağlı çərçivələr</a><a href='razdel/121'>Qeyri-adi ramkalar</a><a href='razdel/122'>Klassik çərçivələr</a><a href='razdel/123'>Modern çərçivələr</a><a href='razdel/124'>Toy, nişan, günləri ilə bağlı çərçivələr</a><a href='razdel/125'>Animasiya personajları ilə bağlı çərçivələr</a></div> <a href='razdel/137'>OYUNCAQLAR</a><h3>Xanımlar üçün gödəkcələr </h3><div class='harmonica-menu-hidden'><a href='razdel/140'>Gödəkçələr</a></div></div></dl>
+
+    </div>
+
+
+
+    <div class="blck_1 news">
+
+     <div class="title">Sayta giriş</div>
+
+     <dl> <form name="authrization" action="index.php" method="post">
+  <table id="login_table">
+   <tbody>
+    <tr><td>
+      <table cellpadding="0" width="200">
+       <tbody>
+        <tr>
+         <td></td>
+        </tr>
+        <tr>
+         <td class="auth_cell_titles">Email</td>
+         <td class="auth_cell" width="100%">
+          <input name="login" style="width: 100%;border:solid 1px #aacfe4;" type="text" />
+         </td>
+        </tr>
+        <tr>
+         <td class="auth_cell_titles">Parol</td>
+         <td class="auth_cell">
+          <input name="password" style="width: 100%;border:solid 1px #aacfe4;" type="password" />
+         </td>
+        </tr>
+        <tr>
+         <td></td>
+         <td class="auth_submit">
+          <input value="Daxil ol" name="submit" class="actions" type="submit" />
+          <input style="text-align:center" value="Qeydiyyat" onclick="location.href='/register';" class="actions"/>
+         </td>
+        </tr>
+       </tbody></table>
+     </td></tr>
+   </tbody>
+  </table>
+ </form>
+ </dl>
+
+    </div>
+
+
+
+
+
+   </div>
+
+   <!-- /left -->
+
+
+
+
+
+   <div id="right">
+
+
+
+    <div class="blck_1 schedule">
+
+     <div class="title_3 title">Dil seçimi</div>
+
+     <div class="wrap" style="text-align: center">
+
+      <table align="center">
+
+       <tr>
+
+        <td><div align="center"><a href="/lang-az"><img src="images/mainpage/azerbaijan.png" alt="Azerbaijan" width="32" /></a></div></td>
+
+        <td><div align="center"><a href="/lang-ru"><img src="images/mainpage/russia.png" alt="Russian" width="32" /></a></div></td>
+
+       </tr>
+
+       <tr>
+
+        <td><div align="center"><a href="/lang-az">AZ</a></div></td>
+
+        <td><div align="center"><a href="/lang-ru">RU</a></div></td>
+
+       </tr>
+
+      </table>
+
+     </div>
+
+    </div>
+
+
+
+    <div class="blck_1 schedule">
+
+     <div class="title_3 title">Günün məhsulu</div>
+
+     <div class="wrap">
+
+      <h5><center> <a href="/product/109" style="text-decoration:none"><img style="border: 2px solid #D0D6DD" src="images/products/thumbs/94578_DSC_0344.jpg_thumb.jpg"  width="150"><br/>Ağac formasında göz muncuğu ilə bəzədilmiş suvenir (018) <br/>10 AZN</a></center></h5>
+
+     </div>
+
+    </div>
+
+
+
+    <div class="blck_1 schedule" style="height:220px">
+
+     <div class="title_3 title">Sosial şəbəkə</div>
+
+     <div class="wrap">
+
+      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fhediyyem.az&amp;width=180&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:280px;" allowTransparency="true"></iframe>
+
+     <br/>
+
+     <center><!--LiveInternet counter--><script type="text/javascript"><!--
+
+document.write("<a href='http://www.liveinternet.ru/click' "+
+
+"target=_blank><img src='//counter.yadro.ru/hit?t11.6;r"+
+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+
+";"+Math.random()+
+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+
+" часа, посетителей за 24 часа и за сегодня' "+
+
+"border='0' width='88' height='31'><\/a>")
+
+//--></script><!--/LiveInternet-->
+
+</center>
+
+
+
+     </div>
+
+    </div>
+
+
+
+   </div>
+
+
+
+
+
+   <div id="center">
+
+    <div style="padding: 0px 0px 5px 0px; margin-bottom:10px">
+
+     <p style="margin: 0 auto">
+
+      <ul id="static_nav">
+ <li class="firstitem"><a href="/">Ana səhifə</a></li>
+   
+ <li><a href='info/28'>Fotogalereya</a></li>
+   
+ <li><a href='info/27'>Topdan satış</a></li>
+   
+ <li><a href='info/25'>Çatdırılma </a></li>
+   
+ <li><a href='info/24'>Necə sifariş etməli</a></li>
+   
+ <li><a href='info/20'>Haqqımızda</a></li>
+   
+ <li><a href='info/19'>Bizimlə əlaqə</a></li>
+  </ul>
+     </p>
+
+    </div>
+
+
+
+    <div style="border: 1px solid #D0D6DD; padding: 5px 0px 5px 0px; margin-bottom:10px">
+ <div class="content">
+  <p><ul id="mycarousel" class="jcarousel-skin-tango">
+  
+   <li><a href="product/238" ><img src="images/products/thumbs/71203_1009872_165929376922504_1291423974_n.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/233" ><img src="images/products/thumbs/6926_1063883_165929870255788_1844082280_o.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/232" ><img src="images/products/thumbs/32292_1271662_185284184987023_1989260310_o.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/230" ><img src="images/products/thumbs/15594_1280455_183407821841326_717632882_n.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/229" ><img src="images/products/thumbs/12330_1276485_185297041652404_947207530_o.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/227" ><img src="images/products/thumbs/75964_1272449_185309078317867_995546373_o.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/215" ><img src="images/products/thumbs/35582_DSC_0235.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/213" ><img src="images/products/thumbs/40317_DSC_0232.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/212" ><img src="images/products/thumbs/33025_DSC_0227.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/211" ><img src="images/products/thumbs/48357_DSC_0223.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/210" ><img src="images/products/thumbs/90900_DSC_0220.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/209" ><img src="images/products/thumbs/98196_DSC_0216.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/208" ><img src="images/products/thumbs/96535_DSC_0210.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/207" ><img src="images/products/thumbs/19753_DSC_0192.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/206" ><img src="images/products/thumbs/83779_DSC_0179.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/205" ><img src="images/products/thumbs/73154_DSC_0172.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/204" ><img src="images/products/thumbs/43040_DSC_0169.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/203" ><img src="images/products/thumbs/89435_DSC_0156.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/202" ><img src="images/products/thumbs/14216_DSC_0148.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/201" ><img src="images/products/thumbs/23842_DSC_0146.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/200" ><img src="images/products/thumbs/61081_DSC_0138.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/199" ><img src="images/products/thumbs/1533_DSC_0125.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/198" ><img src="images/products/thumbs/53325_DSC_0120.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/197" ><img src="images/products/thumbs/56243_DSC_0115.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/196" ><img src="images/products/thumbs/67260_1DSC_0113.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/195" ><img src="images/products/thumbs/12559_2DSC_0100.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/194" ><img src="images/products/thumbs/99484_1DSC_0103.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/193" ><img src="images/products/thumbs/55289_DSC_0316.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/192" ><img src="images/products/thumbs/32831_DSC_0294.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/191" ><img src="images/products/thumbs/85029_DSC_0287.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/190" ><img src="images/products/thumbs/58984_DSC_0129.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/189" ><img src="images/products/thumbs/16045_DSC_0068.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/188" ><img src="images/products/thumbs/51070_37 DSC_0449.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/187" ><img src="images/products/thumbs/61168_22 DSC_0345.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/186" ><img src="images/products/thumbs/66026_DSC_0552.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/185" ><img src="images/products/thumbs/49060_DSC_0550.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/184" ><img src="images/products/thumbs/62634_DSC_0653.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/183" ><img src="images/products/thumbs/38351_DSC_0626.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/182" ><img src="images/products/thumbs/28180_DSC_0613.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/181" ><img src="images/products/thumbs/80265_DSC_0605.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/180" ><img src="images/products/thumbs/76105_DSC_0604.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/179" ><img src="images/products/thumbs/48946_DSC_0255.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/178" ><img src="images/products/thumbs/68014_DSC_0251.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/177" ><img src="images/products/thumbs/55937_DSC_0244.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/176" ><img src="images/products/thumbs/6130_DSC_0236.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/175" ><img src="images/products/thumbs/81539_DSC_0232.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/174" ><img src="images/products/thumbs/62841_DSC_0229.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/173" ><img src="images/products/thumbs/52953_DSC_0226.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/172" ><img src="images/products/thumbs/83805_DSC_0223.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/171" ><img src="images/products/thumbs/82748_DSC_0221.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/170" ><img src="images/products/thumbs/32413_DSC_0166.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/169" ><img src="images/products/thumbs/83217_DSC_0164.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/168" ><img src="images/products/thumbs/79117_DSC_0161.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/167" ><img src="images/products/thumbs/71461_DSC_0159.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/166" ><img src="images/products/thumbs/13953_DSC_0153.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/165" ><img src="images/products/thumbs/74326_DSC_0150.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/164" ><img src="images/products/thumbs/47177_DSC_0146.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/163" ><img src="images/products/thumbs/32951_DSC_0142.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/162" ><img src="images/products/thumbs/59169_DSC_0139.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/161" ><img src="images/products/thumbs/23715_DSC_0135.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/160" ><img src="images/products/thumbs/86909_DSC_0128.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/159" ><img src="images/products/thumbs/74998_DSC_0121.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/158" ><img src="images/products/thumbs/13976_DSC_0119.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/157" ><img src="images/products/thumbs/49640_DSC_0115.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/156" ><img src="images/products/thumbs/13849_DSC_0113.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/155" ><img src="images/products/thumbs/79531_DSC_0110.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/154" ><img src="images/products/thumbs/86806_DSC_0088.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/153" ><img src="images/products/thumbs/85158_DSC_0085.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/152" ><img src="images/products/thumbs/60293_DSC_0077.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/151" ><img src="images/products/thumbs/42788_DSC_0080.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/150" ><img src="images/products/thumbs/94963_DSC_0071.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/149" ><img src="images/products/thumbs/17033_DSC_0067.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/148" ><img src="images/products/thumbs/29511_DSC_0064.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/147" ><img src="images/products/thumbs/50619_DSC_0062.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/146" ><img src="images/products/thumbs/37618_DSC_0012.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/145" ><img src="images/products/thumbs/81693_DSC_0056.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/144" ><img src="images/products/thumbs/20672_DSC_0051.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/142" ><img src="images/products/thumbs/83645_DSC_0013.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/141" ><img src="images/products/thumbs/43514_DSC_0015.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/140" ><img src="images/products/thumbs/92754_DSC_0013.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/139" ><img src="images/products/thumbs/36138_sahil DSC_0662.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/138" ><img src="images/products/thumbs/51149_sahil DSC_0089.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/135" ><img src="images/products/thumbs/47243_12 DSC_0009.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/134" ><img src="images/products/thumbs/80511_DSC_0611.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/132" ><img src="images/products/thumbs/54906_111DSC_0007 - Copy (2).jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/129" ><img src="images/products/thumbs/58106_34 SC_0397.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/128" ><img src="images/products/thumbs/39234_DSC_0405.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/126" ><img src="images/products/thumbs/8016_DSC_0401.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/125" ><img src="images/products/thumbs/4283_DSC_0399.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/124" ><img src="images/products/thumbs/75385_DSC_0398.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/121" ><img src="images/products/thumbs/43846_DSC_0389.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/120" ><img src="images/products/thumbs/66355_DSC_0386.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/119" ><img src="images/products/thumbs/19089_DSC_0384.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/116" ><img src="images/products/thumbs/15340_DSC_0372.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/115" ><img src="images/products/thumbs/68549_DSC_0369.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/114" ><img src="images/products/thumbs/28822_DSC_0364.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/113" ><img src="images/products/thumbs/45792_DSC_0356.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/111" ><img src="images/products/thumbs/56769_DSC_0348.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/110" ><img src="images/products/thumbs/69779_DSC_0345.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/109" ><img src="images/products/thumbs/94578_DSC_0344.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/108" ><img src="images/products/thumbs/71212_DSC_0336.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/107" ><img src="images/products/thumbs/5196_DSC_0332.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/104" ><img src="images/products/thumbs/54126_DSC_0328.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/103" ><img src="images/products/thumbs/70193_DSC_0320.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/102" ><img src="images/products/thumbs/28534_DSC_0319.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/101" ><img src="images/products/thumbs/98528_DSC_0314.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/100" ><img src="images/products/thumbs/81374_DSC_0312.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/99" ><img src="images/products/thumbs/47778_DSC_0297.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/98" ><img src="images/products/thumbs/35639_DSC_0295.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/96" ><img src="images/products/thumbs/94161_DSC_0284.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/95" ><img src="images/products/thumbs/76617_DSC_0272.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/93" ><img src="images/products/thumbs/94833_DSC_0278.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/91" ><img src="images/products/thumbs/91746_DSC_0270.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/90" ><img src="images/products/thumbs/28395_DSC_0267.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/85" ><img src="images/products/thumbs/66076_DSC_0175.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/84" ><img src="images/products/thumbs/9754_DSC_0173.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/83" ><img src="images/products/thumbs/80236_DSC_0212.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/82" ><img src="images/products/thumbs/33907_DSC_0221.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/81" ><img src="images/products/thumbs/25424_DSC_0169.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/80" ><img src="images/products/thumbs/81793_DSC_0170.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/74" ><img src="images/products/thumbs/91190_DSC_0165.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/73" ><img src="images/products/thumbs/95554_6458_DSC_0163.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/72" ><img src="images/products/thumbs/93053_9380_DSC_0162.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/71" ><img src="images/products/thumbs/9745_DSC_0161.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/70" ><img src="images/products/thumbs/66276_48881_DSC_0159.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/69" ><img src="images/products/thumbs/29757_29268_DSC_0158.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/68" ><img src="images/products/thumbs/69263_51512_DSC_0156.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/67" ><img src="images/products/thumbs/48135_59503_DSC_0155.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/66" ><img src="images/products/thumbs/94012_23783_DSC_0153.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/63" ><img src="images/products/thumbs/19937_58135_14483_DSC_0150.jpg.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/62" ><img src="images/products/thumbs/24703_84448_DSC_0149.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/61" ><img src="images/products/thumbs/83665_27419_DSC_0138.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/60" ><img src="images/products/thumbs/80737_DSC_0146.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/59" ><img src="images/products/thumbs/25572_41021_DSC_0145.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/58" ><img src="images/products/thumbs/97088_50717_DSC_0144.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/57" ><img src="images/products/thumbs/56682_72320_DSC_0142.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/56" ><img src="images/products/thumbs/57580_10445_DSC_0141.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/54" ><img src="images/products/thumbs/15373_20028_DSC_0137.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/53" ><img src="images/products/thumbs/50093_DSC_0164.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+     
+   <li><a href="product/51" ><img src="images/products/thumbs/77375_DSC_0139.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0" /></a></li>
+    </ul>
+</p>
+ </div>
+</div>
+
+<div class = "blck_1 special">
+ <div class = "title title_4">
+  Axtar  <p class = "lnk"></p>
+ </div>
+ <div class = "wrap_m">
+  <p><form method="post" enctype="multipart/form-data">
+ <table id="param-search" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <colgroup><col width="30%">
+   <col width="70%">
+  </colgroup><tbody>
+
+   <tr id="producter">                        	
+    <td class="parametr-title" valign="middle" style="padding:0px 15px 0px 3px;">Məhsulların kateqoriyaları:</td>
+    <td class="gr parametr-values" nowrap="" style="padding-right:15px;">
+
+     <table border="0" cellpadding="1" cellspacing="1">
+      <tbody><tr>
+      <select id="category" name="root">
+       <option disabled selected>Məhsulun adı</option>
+       <option value='78'> SUVENİRLƏR</option><option value='105'> SAATLAR</option><option value='107'> BİJUTERİYA</option><option value='119'>  ŞƏKİL ÜÇÜN ÇƏRÇİVƏLƏR</option><option value='137'> OYUNCAQLAR</option><option value='139'> Xanımlar üçün gödəkcələr </option>      </select>
+      <select id="sub-category" size="1" name="sub">
+       <option value="0">Məhsulun kateqoriyası</option>
+      </select>
+
+
+   </tr>
+  </tbody></table>
+</td>
+</tr>				
+
+<tr id="producer_series_line" style="display:none;">
+ <td colspan="2"><p style="background-color:#ececeb;margin-top:5px;margin-bottom:8px;"><img src="./Дизельные мотопомпы_files/sp.gif" width="100%" height="1"></p></td>
+</tr>
+<tr id="line1">
+ <td colspan="2"><p style="background-color:#ececeb;margin-top:5px;margin-bottom:8px;"><img src="./Дизельные мотопомпы_files/sp.gif" width="100%" height="1"></p></td>
+</tr>
+
+<tr id="price">
+ <td class="gr parametr-title" style="padding:0px 40px 0px 3px;">Qiymət  :</td>
+ <td class="gr parametr-values" width="98%">
+  &nbsp;<input class="text" style="text-align: center" type="text" size="8" maxlength="10" name="price_from" value="MIN" onfocus="clearText(this)" onblur="clearText(this)">&nbsp;&nbsp;&nbsp;
+  -&nbsp;<input class="text" style="text-align: center" type="text" name="price_to" size="8" maxlength="10" value="MAX" onfocus="clearText(this)" onblur="clearText(this)">&nbsp;AZN.
+ </td>
+</tr>
+
+<tr id="line2">
+ <td colspan="2"><p style="background-color:#ececeb;margin-top:5px;margin-bottom:8px;"><img src="./Дизельные мотопомпы_files/sp.gif" width="100%" height="1"></p></td>
+</tr>				
+
+<tr style="display: none;">
+ <td colspan="2"><p style="background-color:#ececeb;margin-top:5px;margin-bottom:8px;"><img src="./Дизельные мотопомпы_files/sp.gif" width="100%" height="1"></p></td>
+</tr>
+
+<tr>
+ <td><input type="submit" name="reg" value="Axtar" class="actions"></td>
+</tr>
+
+</tbody></table>
+</form>
+
+<script type="text/javascript">
+ $("#category").change(function() {
+  $("#sub-category").load("site/other/filter.php", {id: $("#category option:selected").val()});
+ });
+</script></p>
+ </div>
+</div>
+
+
+<div class = "blck_1 new_goods">
+ <div class = "title title_5">Məhsulların siyahısı</div>
+ <div class = "content">
+  <p>﻿</td></table><table width=100%  cellspacing=0 cellpadding=0><tr valign='top'></tr><tr valign='top' style='float:left' ><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/242" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/93385_5196_DSC_0332.jpg.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Dubaydan gətirilmiş, bəzəkli kül qabı<br><font color="#E14B40">25 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(242)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/241" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/65691_9745_DSC_0161.jpg.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Zövqünüzü oxşayacaq divar saatı<br><font color="#E14B40">16 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(241)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/239" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/1984_4283_DSC_0399.jpg.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Qələm və brelok dəsti <br><font color="#E14B40">6 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(239)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table></tr><tr valign='top' style='float:left' ><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/238" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/71203_1009872_165929376922504_1291423974_n.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Orijinal at təsvirli suvenir<br><font color="#E14B40">30 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(238)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/237" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/80687_998165_165933463588762_1442321055_n.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Evinizi bəzəyəcək , məscid təsvirli divar saatı<br><font color="#E14B40">20 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(237)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/236" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/47363_943275_165933203588788_1735015157_n.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Evinizi bəzəyəcək orijinal divar saatı<br><font color="#E14B40">17 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(236)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table></tr><tr valign='top' style='float:left' ><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/234" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/9178_1064892_166115686903873_2007946450_o.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Gözmuncuğu və ləçəklərlə bəzədilmiş suvenir<br><font color="#E14B40">10 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(234)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/233" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/6926_1063883_165929870255788_1844082280_o.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Öz orijinallığı ilə seçilən, Dubaydan gətirilmiş ceyran təsvirli heykəl<br><font color="#E14B40">55 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(233)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/232" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/32292_1271662_185284184987023_1989260310_o.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Sevgililər üçün uyğun seçim .Unudulmaz xatirələrinizi xatırladacaq şəkil çərçivəsi <br><font color="#E14B40">15 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(232)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table></tr><tr valign='top' style='float:left' ><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/230" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/15594_1280455_183407821841326_717632882_n.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Mərkəzi cüt ürək şəklində hazırlanmış kənarı qaşlarla bəzədilmiş 925 əyyarlı xalis gümüş bilərzik<br><font color="#E14B40">40 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(230)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/229" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/12330_1276485_185297041652404_947207530_o.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Ürək şəklində hazırlanmış , şəkil çərçivəsi . Xatirələrinizi əbədiləşdirin<br><font color="#E14B40">15 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(229)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/228" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/28807_1073703_183212465194195_1706382319_o.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Bəzək əşyalarınızı yerləşdirmək üçün uyğun seçim <br><font color="#E14B40">10 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(228)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table></tr><tr valign='top' style='float:left' ><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/227" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/75964_1272449_185309078317867_995546373_o.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b> Zövqlə çəkilmiş şəkillərinizin ünvanı ola biləcək şəkil çərçivəsi <br><font color="#E14B40">15 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(227)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/226" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/53620_1003200_181184625396979_1842126701_n (1).jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Zərif xanımlarımızın sevimli bəzək əşyasına çevriləcək , 925 əyyarlı gümüş bilərzik <br><font color="#E14B40">25 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(226)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/215" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/35582_DSC_0235.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Gənc xanımlarımızın sevimli bəzək əşyasına çevriləcək yaşıl qaşla bəzədilmiş 925 əyyarlı gümüş üzük <br><font color="#E14B40">22 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(215)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table></tr><tr valign='top' style='float:left' ><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/213" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/40317_DSC_0232.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Qeyri - adi xanımlarımızın zövqlərinə uyğun  mükəmməl seçim 925 əyyarlı gümüş üzük <br><font color="#E14B40">22 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(213)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/212" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/33025_DSC_0227.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Mərkəzi yaşıl qaşla bəzədilmiş,xanımlarımız üçün 925 əyyarlı ecazkar gümüş üzük <br><font color="#E14B40">30 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(212)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/211" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/48357_DSC_0223.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Mərkəzi bənövşəyi və  kənarları kiçik ağ qaşlarla bəzədilmiş 925 əyyarlı gümüş üzük <br><font color="#E14B40">25 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(211)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table></tr><tr valign='top' style='float:left' ><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/210" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/90900_DSC_0220.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Mərkəzi yaşıl qaşla bəzədilmiş 925 əyyarlı gümüş  üzük,xanımlarımızın zövqlü seçimi <br><font color="#E14B40">25 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(210)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table><td valign='top'><table width=100% cellpadding=0 cellspacing=5><tr><td>    <a href="/product/209" style="text-decoration:none">    <div class="product_img"><center><img src="images/products/thumbs/98196_DSC_0216.jpg_thumb.jpg"  width="200" height="180"></div>    <div style="text-align:center; width:200px" >    <span style="color:#2B404B"><b>Kənarları kiçik qaşlarla,mərkəzi yaşıl nefrit qaşla bəzədilmiş,925 əyyarlı gümüş üzük <br><font color="#E14B40">25 AZN</font></b></span>    </a>    <div class=""><a onclick="add_to_cart(209)" class="buy_button">Səbətə əlavə et</a></div>    </div>    </div>     </td></tr></table></td></table><div><span>&nbsp;Səhifələr: </span><span><strong>1</strong> | <a href="/razdel/0-2">2</a> | <a href="/razdel/0-3">3</a> ... <a href="/razdel/0-8">Последняя страница</a>
+</span></div>
+   </p>
+ </div>
+</div>
+ 
+
+   </div>
+
+
+
+   <div id = "prefooter"><br/></div>
+
+   <div id = "footer">
+
+    <div id = "m_footer">
+
+     <ul>
+
+      <li><a href = "http://facebook.com/urmuz">Developed by Urmuz Tagizade</a></li>
+
+
+
+     </ul>
+
+    </div>
+
+   </div>
+
+
+
+  </div>
+
+ </body>
+
+</html>

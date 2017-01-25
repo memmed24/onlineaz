@@ -1,0 +1,1284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0021)http://oyuncaqci.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  
+<meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+  <title>onlineal.az</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <!--<base href="http://oyuncaqci.com">--><base href=".">
+<link rel="stylesheet" href="style/owl.carousel.css">
+  <link rel="stylesheet" href="style/owl.theme.css">
+  <link rel="stylesheet" href="style/owl.transitions.css">
+  <link href="style/style.css" rel="stylesheet" type="text/css">
+
+  <link href="style/slider.css" rel="stylesheet" type="text/css">
+  <!-- bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="./WWW.HEDIYYEM.AZ_files/jquery-1.8.1.min.js.download"></script>
+
+  <script type="text/javascript" src="./WWW.HEDIYYEM.AZ_files/jquery.notice.js.download"></script>
+
+  <script type="text/javascript" src="./WWW.HEDIYYEM.AZ_files/jquery.maskedinput.js.download"></script>
+
+  <script type="text/javascript" src="./WWW.HEDIYYEM.AZ_files/jquery.jcarousel.min.js.download"></script>
+
+  <script type="text/javascript" src="./WWW.HEDIYYEM.AZ_files/jquery.form.js.download"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+  
+  <script src="script/main.js"></script>
+  <script type="text/javascript">
+
+
+
+   function mycarousel_initCallback(carousel)
+
+   {
+
+    // Disable autoscrolling if the user clicks the prev or next button.
+
+    carousel.buttonNext.bind('click', function() {
+
+     carousel.startAuto(0);
+
+    });
+
+
+
+    carousel.buttonPrev.bind('click', function() {
+
+     carousel.startAuto(0);
+
+    });
+
+
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+
+    carousel.clip.hover(function() {
+
+     carousel.stopAuto();
+
+    }, function() {
+
+     carousel.startAuto();
+
+    });
+
+   }
+
+   ;
+
+
+
+   jQuery(document).ready(function() {
+
+    jQuery('#mycarousel').jcarousel({
+
+     auto: 5,
+
+     wrap: 'last',
+
+     initCallback: mycarousel_initCallback
+
+    });
+
+   });
+
+
+
+  </script>
+
+  <script type="text/javascript">
+
+   function add_to_cart(product_id) {
+
+    $.post("cart/backend/add_to_cart.php", {product_id: product_id}, update_cart);
+
+    jQuery.noticeAdd({
+
+     text: 'Uğurla səbətə daxil olundu',
+
+     stay: false
+
+    });
+
+   }
+
+   function update_cart() {
+
+    $.post("cart/backend/update_cart.php", {}, on_success);
+
+    function on_success(data)
+
+    {
+
+     $('#small_cart').html(data);
+
+    }
+
+   }
+
+   function remove_from_cart(product_id) {
+
+    $.post("cart/backend/remove_from_cart.php", {product_id: product_id}, update_cart_interface);
+
+   }
+
+   function update_product_count(product_id, count) {
+
+    $.post("cart/backend/update_product_count.php", {product_id: product_id, count: count}, update_cart_interface);
+
+   }
+
+   function update_cart_interface() {
+
+    $.post("cart/backend/cart_interface.php", {}, on_success);
+
+    function on_success(data)
+
+    {
+
+     $('#cart_interface').html(data);
+
+    }
+
+   }
+
+  </script>
+
+  <script type="text/javascript">
+
+   $(document).ready(function() {
+
+
+
+    $(":submit").click(function() {
+
+     $("#preview").html('');
+
+     $("#current").hide();
+
+     $("#preview").html('<img src="images/ajax-loader.gif" alt="Подождите пожалуйста...."/>');
+
+     $("#ajaxform").ajaxForm({
+
+      target: '#preview'
+
+     });
+
+    });
+
+   });
+
+  </script>
+
+  <script language="javascript" type="text/javascript">
+
+   function clearText(field)
+
+   {
+
+    if (field.defaultValue == field.value)
+
+     field.value = '';
+
+    else if (field.value == '')
+
+     field.value = field.defaultValue;
+
+   }
+
+  </script>
+
+ <style type="text/css">img[src="//counter.yadro.ru/hit?t11.6;r;s1366*768*24;uhttp%3A//oyuncaqci.com/;0.8799611415842274"],
+img[src="//counter.yadro.ru/hit?t11.6;rhttp%3A//oyuncaqci.com/;s1366*768*24;uhttp%3A//oyuncaqci.com/basket;0.854261133124826"],
+img[src="//counter.yadro.ru/hit?t11.6;rhttp%3A//oyuncaqci.com/basket;s1366*768*24;uhttp%3A//oyuncaqci.com/;0.779814086961303"],
+img[src="//counter.yadro.ru/hit?t11.6;r;s1366*768*24;uhttp%3A//oyuncaqci.com/demo_site/;0.4459815801033591"]
+{display:none !important;}</style></head>
+
+ <body>
+
+  <div id="body">
+
+   <div id="m_top" >
+
+   </div>
+
+   <!-- breadcrumbs -->
+
+   <ul id="breadcrumbs" class="clearfix">
+
+    <!-- <li>&nbsp;</li> -->
+
+   </ul>
+
+   <!-- /breadcrubms -->
+
+   <!-- left -->
+
+   <div id="left">
+
+
+
+    <div class="blck_1 news">
+
+     <div class="title"><img src="./WWW.HEDIYYEM.AZ_files/cart.png" width="15"> Səbət</div>
+
+
+     <dl><div id="small_cart">
+ <li><a href="http://oyuncaqci.com/basket" class="cart"><img src="./WWW.HEDIYYEM.AZ_files/cart.png" width="17"> Məhsullar: 2 əd. (41 AZN)</a></li></div></dl> <br />
+    <div style="height: 10px;"></div>
+    <a class="buy_now" href="http://oyuncaqci.com/basket">İndi al</a>
+    </div>
+
+
+
+    <div class="blck_1 news">
+
+     <div class="title">Kateqoriya</div>
+
+     <dl><style>
+ .harmonica-menu a, .harmonica-menu h3 {
+  display: block;
+  padding: 5px 5px 5px 15px;
+  color: #4B565C;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 0;
+ }
+
+ .harmonica-menu h3 {
+  background: url(../images/level-item.png) left center no-repeat;
+ }
+
+ .open {
+  background: url(../images/level-item2.png) left center no-repeat !important;
+ }
+
+ .harmonica-menu-hidden {
+  display: none;
+  padding: 5px 5px 5px 20px;
+ }
+
+ .harmonica-menu-hidden a {
+  font-weight: normal;
+  padding: 5px;
+ }
+</style>
+<script language="javascript" type="text/javascript">
+ $(document).ready(function() {
+  $('.harmonica-menu h3').click(function() {
+   $(this).next('.harmonica-menu-hidden').slideToggle();
+   $(this).toggleClass('open');
+  });
+ });
+</script>
+
+
+<div class="harmonica-menu">
+ <h3 style="color: #3B5998; font-weight: 100">SUVENİRLƏR</h3><div class="harmonica-menu-hidden"><a href="http://oyuncaqci.com/razdel/87">Suvenirlər və Aksesuarlar</a></div><h3 style="color: #3B5998; font-weight: 100">SAATLAR</h3><div class="harmonica-menu-hidden"><a href="http://oyuncaqci.com/razdel/86">Divar Saaatları </a><a href="http://oyuncaqci.com/razdel/106">Stolüstü saatlar</a></div><h3 style="color: #3B5998; font-weight: 100">BİJUTERİYA</h3><div class="harmonica-menu-hidden"><a href="http://oyuncaqci.com/razdel/84">Komplektlər </a><a href="http://oyuncaqci.com/razdel/108">Bilərziklər</a><a href="http://oyuncaqci.com/razdel/109">Sırğalar</a><a href="http://oyuncaqci.com/razdel/110">Üzüklər</a><a href="http://oyuncaqci.com/razdel/111">Boyunbağılar</a><a href="http://oyuncaqci.com/razdel/112">Broşlar</a><a href="http://oyuncaqci.com/razdel/113">Abadoklar</a><a href="http://oyuncaqci.com/razdel/114">Breloklar</a><a href="http://oyuncaqci.com/razdel/115">Klonlar</a><a href="http://oyuncaqci.com/razdel/117">Cüzdanlar </a></div><h3 style="color: #3B5998; font-weight: 100"> ŞƏKİL ÜÇÜN ÇƏRÇİVƏLƏR</h3><div class="harmonica-menu-hidden"><a href="http://oyuncaqci.com/razdel/120">Sevgi ilə bağlı çərçivələr</a><a href="http://oyuncaqci.com/razdel/121">Qeyri-adi ramkalar</a><a href="http://oyuncaqci.com/razdel/122">Klassik çərçivələr</a><a href="http://oyuncaqci.com/razdel/123">Modern çərçivələr</a><a href="http://oyuncaqci.com/razdel/124">Toy, nişan, günləri ilə bağlı çərçivələr</a><a href="http://oyuncaqci.com/razdel/125">Animasiya personajları ilə bağlı çərçivələr</a></div> <a href="http://oyuncaqci.com/razdel/137" style="color: #3B5998; font-weight: 100">OYUNCAQLAR</a><h3 style="color: #3B5998; font-weight: 100">Xanımlar üçün gödəkcələr </h3><div class="harmonica-menu-hidden"><a href="http://oyuncaqci.com/razdel/140">Gödəkçələr</a></div></div></dl>
+
+    </div>
+
+
+
+    <div class="blck_1 news">
+
+     <div class="title">Sayta giriş</div>
+
+     <dl> <form name="authrization" action="http://oyuncaqci.com/index.php" method="post">
+  <table id="login_table">
+   <tbody>
+    <tr><td>
+      <table cellpadding="0" width="200">
+       <tbody>
+        <tr>
+         <td></td>
+        </tr>
+        <tr>
+         <td class="auth_cell_titles">Email</td>
+         <td class="auth_cell" width="100%">
+          <input name="login" style="width: 100%;border:solid 1px #aacfe4;" type="text">
+         </td>
+        </tr>
+        <tr>
+         <td class="auth_cell_titles">Parol</td>
+         <td class="auth_cell">
+          <input name="password" style="width: 100%;border:solid 1px #aacfe4;" type="password">
+         </td>
+        </tr>
+        <tr>
+         <td></td>
+         <td class="auth_submit">
+          <input value="Daxil ol" name="submit" style="width: 152px;background-color: #3B5998;" class="actions" type="submit">
+          <input style="text-align:center; background-color:#3B5998"  value="Qeydiyyat" onclick="location.href=&#39;/register&#39;;" class="actions">
+         </td>
+        </tr>
+       </tbody></table>
+     </td></tr>
+   </tbody>
+  </table>
+ </form>
+ </dl>
+    </div>
+
+    <div class="advertisement">
+          
+        <div style="background-color: #3B5998; color: white; padding-left: 15px;padding-top: 10px; padding-bottom: 10px;">Ən çox satılanlar</div>
+
+        <div class="ad-text" ">
+          
+          <img src="img/mostt.gif" alt="" />
+
+        </div>
+
+    </div>
+  
+
+   </div>
+
+   <!-- /left -->
+
+
+
+
+
+   <div id="right">
+
+
+
+    <!-- <div class="blck_1 schedule">
+
+     <div class="title_3 title" style="background-color: #3B5998">Dil seçimi</div>
+
+     <div class="wrap" style="text-align: center">
+
+      <table align="center">
+
+       <tbody><tr>
+
+        <td><div align="center"><a href="http://oyuncaqci.com/lang-az"><img src="./WWW.HEDIYYEM.AZ_files/azerbaijan.png" alt="Azerbaijan" width="32"></a></div></td>
+
+        <td><div align="center"><a href="http://oyuncaqci.com/lang-ru"><img src="./WWW.HEDIYYEM.AZ_files/russia.png" alt="Russian" width="32"></a></div></td>
+
+       </tr>
+
+       <tr>
+
+        <td><div align="center"><a href="http://oyuncaqci.com/lang-az">AZ</a></div></td>
+
+        <td><div align="center"><a href="http://oyuncaqci.com/lang-ru">RU</a></div></td>
+
+       </tr>
+
+      </tbody></table>
+
+     </div>
+
+    </div> -->
+
+
+
+    <div class="blck_1 schedule">
+
+     <div class="title_3 title" style="background-color: #3B5998">Günün məhsulu</div>
+
+     <div class="wrap">
+
+      <h5><center> <a href="http://oyuncaqci.com/product/109" style="text-decoration:none"><img style="border: 2px solid #D0D6DD" src="./WWW.HEDIYYEM.AZ_files/94578_DSC_0344.jpg_thumb.jpg" width="150"><br>Ağac formasında göz muncuğu ilə bəzədilmiş suvenir (018) <br>10 AZN</a></center></h5>
+
+     </div>
+
+    </div>
+
+
+
+    <div class="blck_1 schedule" style="height:220px">
+
+     <div class="title_3 title" style="background-color: #3B5998">Sosial şəbəkə</div>
+     
+     <div class="wrap social">
+
+      <!-- <iframe src="./WWW.HEDIYYEM.AZ_files/likebox.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:280px;" allowtransparency="true"></iframe> -->
+    <!-- <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdasgasci&width=50&layout=box_count&action=like&size=small&show_faces=true&share=true&height=65&appId" width="50" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
+    <iframe class="iframe_forfb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fonlineal&tabs=timeline&width=200&height=473&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="473" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+     <br>
+
+     <center><!--LiveInternet counter-->
+      <!-- <script type="text/javascript"><!
+
+document.write("<a href='http://www.liveinternet.ru/click' "+
+
+"target=_blank><img src='//counter.yadro.ru/hit?t11.6;r"+
+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+
+";"+Math.random()+
+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+
+" часа, посетителей за 24 часа и за сегодня' "+
+
+"border='0' width='88' height='31'><\/a>")
+
+//</script> --> 
+<!-- <a href="http://www.liveinternet.ru/click" target="_blank"><img src="http://counter.yadro.ru/hit?t11.6;r;s1366*768*24;uhttp%3A//oyuncaqci.com/;0.2023917001531248" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" border="0" width="88" height="31" hidden="" style="display: none !important;"></a><!--/LiveInternet--> 
+
+</center>
+
+
+
+     </div>
+
+    </div>
+
+
+
+   </div>
+
+
+
+
+
+   <div id="center">
+
+    <div style="padding: 0px 0px 5px 0px; margin-bottom:10px">
+
+     <p style="margin: 0 auto">
+
+      </p><ul id="static_nav">
+ <li class="firstitem"><a href="http://oyuncaqci.com/">Ana səhifə</a></li>
+   
+ <li><a href="http://oyuncaqci.com/info/28">Fotogalereya</a></li>
+   
+ <li><a href="http://oyuncaqci.com/info/27">Topdan satış</a></li>
+   
+ <li><a href="http://oyuncaqci.com/info/25">Çatdırılma </a></li>
+   
+ <li><a href="http://oyuncaqci.com/info/24">Necə sifariş etməli</a></li>
+   
+ <li><a href="http://oyuncaqci.com/info/20">Haqqımızda</a></li>
+   
+ <li><a href="http://oyuncaqci.com/info/19">Bizimlə əlaqə</a></li>
+  </ul>
+     <p></p>
+
+    </div>
+
+<section style="height: auto">
+  <div id="demo">
+      <div class="container" style="width: 750px">
+        <div class="row" style="height: 252px !important">  
+          <div class="span12">
+
+            <div id="owl-demo" class="owl-carousel" style="height: auto; width: 750px;">
+              <div><img style="width: 750px;" src="img/1.jpg"></div>
+              <div><img  src="http://placehold.it/750x187/42bdc2/FFFFFF"></div>
+              <div><img  src="http://placehold.it/750x187/42bdc2/FFFFFF"></div>
+              <div><img  src="http://placehold.it/750x187/42bdc2/FFFFFF"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+    
+ <!-- <div id="new_center_slider">
+     <div class="visible">
+       <div class="unvisible_center_slider">
+         <div class="center_slider_pic csp1"></div>
+         <div class="center_slider_pic csp2"></div>
+         <div class="center_slider_pic csp3"></div>
+         <div class="center_slider_pic csp4"></div>
+       </div>
+    </div>
+   </div> -->
+  
+
+  <!-- center slide -->
+
+   <!--  <div style="border: 1px solid #D0D6DD; padding: 5px 0px 5px 0px; margin-bottom:10px">
+ <div class="content">
+  <p></p><div class=" jcarousel-skin-tango"><div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;"><div class="jcarousel-clip jcarousel-clip-horizontal" style="position: relative;"><ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: -6987px; width: 19280px;">
+  
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/238"><img src="./WWW.HEDIYYEM.AZ_files/71203_1009872_165929376922504_1291423974_n.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/233"><img src="./WWW.HEDIYYEM.AZ_files/6926_1063883_165929870255788_1844082280_o.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/232"><img src="./WWW.HEDIYYEM.AZ_files/32292_1271662_185284184987023_1989260310_o.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/230"><img src="./WWW.HEDIYYEM.AZ_files/15594_1280455_183407821841326_717632882_n.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-5 jcarousel-item-5-horizontal" jcarouselindex="5" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/229"><img src="./WWW.HEDIYYEM.AZ_files/12330_1276485_185297041652404_947207530_o.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-6 jcarousel-item-6-horizontal" jcarouselindex="6" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/227"><img src="./WWW.HEDIYYEM.AZ_files/75964_1272449_185309078317867_995546373_o.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-7 jcarousel-item-7-horizontal" jcarouselindex="7" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/215"><img src="./WWW.HEDIYYEM.AZ_files/35582_DSC_0235.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-8 jcarousel-item-8-horizontal" jcarouselindex="8" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/213"><img src="./WWW.HEDIYYEM.AZ_files/40317_DSC_0232.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-9 jcarousel-item-9-horizontal" jcarouselindex="9" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/212"><img src="./WWW.HEDIYYEM.AZ_files/33025_DSC_0227.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-10 jcarousel-item-10-horizontal" jcarouselindex="10" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/211"><img src="./WWW.HEDIYYEM.AZ_files/48357_DSC_0223.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-11 jcarousel-item-11-horizontal" jcarouselindex="11" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/210"><img src="./WWW.HEDIYYEM.AZ_files/90900_DSC_0220.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-12 jcarousel-item-12-horizontal" jcarouselindex="12" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/209"><img src="./WWW.HEDIYYEM.AZ_files/98196_DSC_0216.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-13 jcarousel-item-13-horizontal" jcarouselindex="13" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/208"><img src="./WWW.HEDIYYEM.AZ_files/96535_DSC_0210.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-14 jcarousel-item-14-horizontal" jcarouselindex="14" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/207"><img src="./WWW.HEDIYYEM.AZ_files/19753_DSC_0192.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-15 jcarousel-item-15-horizontal" jcarouselindex="15" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/206"><img src="./WWW.HEDIYYEM.AZ_files/83779_DSC_0179.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-16 jcarousel-item-16-horizontal" jcarouselindex="16" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/205"><img src="./WWW.HEDIYYEM.AZ_files/73154_DSC_0172.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-17 jcarousel-item-17-horizontal" jcarouselindex="17" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/204"><img src="./WWW.HEDIYYEM.AZ_files/43040_DSC_0169.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-18 jcarousel-item-18-horizontal" jcarouselindex="18" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/203"><img src="./WWW.HEDIYYEM.AZ_files/89435_DSC_0156.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-19 jcarousel-item-19-horizontal" jcarouselindex="19" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/202"><img src="./WWW.HEDIYYEM.AZ_files/14216_DSC_0148.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-20 jcarousel-item-20-horizontal" jcarouselindex="20" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/201"><img src="./WWW.HEDIYYEM.AZ_files/23842_DSC_0146.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-21 jcarousel-item-21-horizontal" jcarouselindex="21" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/200"><img src="./WWW.HEDIYYEM.AZ_files/61081_DSC_0138.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-22 jcarousel-item-22-horizontal" jcarouselindex="22" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/199"><img src="./WWW.HEDIYYEM.AZ_files/1533_DSC_0125.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-23 jcarousel-item-23-horizontal" jcarouselindex="23" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/198"><img src="./WWW.HEDIYYEM.AZ_files/53325_DSC_0120.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-24 jcarousel-item-24-horizontal" jcarouselindex="24" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/197"><img src="./WWW.HEDIYYEM.AZ_files/56243_DSC_0115.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-25 jcarousel-item-25-horizontal" jcarouselindex="25" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/196"><img src="./WWW.HEDIYYEM.AZ_files/67260_1DSC_0113.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-26 jcarousel-item-26-horizontal" jcarouselindex="26" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/195"><img src="./WWW.HEDIYYEM.AZ_files/12559_2DSC_0100.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-27 jcarousel-item-27-horizontal" jcarouselindex="27" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/194"><img src="./WWW.HEDIYYEM.AZ_files/99484_1DSC_0103.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-28 jcarousel-item-28-horizontal" jcarouselindex="28" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/193"><img src="./WWW.HEDIYYEM.AZ_files/55289_DSC_0316.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-29 jcarousel-item-29-horizontal" jcarouselindex="29" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/192"><img src="./WWW.HEDIYYEM.AZ_files/32831_DSC_0294.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-30 jcarousel-item-30-horizontal" jcarouselindex="30" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/191"><img src="./WWW.HEDIYYEM.AZ_files/85029_DSC_0287.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-31 jcarousel-item-31-horizontal" jcarouselindex="31" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/190"><img src="./WWW.HEDIYYEM.AZ_files/58984_DSC_0129.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-32 jcarousel-item-32-horizontal" jcarouselindex="32" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/189"><img src="./WWW.HEDIYYEM.AZ_files/16045_DSC_0068.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-33 jcarousel-item-33-horizontal" jcarouselindex="33" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/188"><img src="./WWW.HEDIYYEM.AZ_files/51070_37 DSC_0449.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-34 jcarousel-item-34-horizontal" jcarouselindex="34" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/187"><img src="./WWW.HEDIYYEM.AZ_files/61168_22 DSC_0345.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-35 jcarousel-item-35-horizontal" jcarouselindex="35" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/186"><img src="./WWW.HEDIYYEM.AZ_files/66026_DSC_0552.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-36 jcarousel-item-36-horizontal" jcarouselindex="36" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/185"><img src="./WWW.HEDIYYEM.AZ_files/49060_DSC_0550.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-37 jcarousel-item-37-horizontal" jcarouselindex="37" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/184"><img src="./WWW.HEDIYYEM.AZ_files/62634_DSC_0653.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-38 jcarousel-item-38-horizontal" jcarouselindex="38" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/183"><img src="./WWW.HEDIYYEM.AZ_files/38351_DSC_0626.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-39 jcarousel-item-39-horizontal" jcarouselindex="39" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/182"><img src="./WWW.HEDIYYEM.AZ_files/28180_DSC_0613.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-40 jcarousel-item-40-horizontal" jcarouselindex="40" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/181"><img src="./WWW.HEDIYYEM.AZ_files/80265_DSC_0605.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-41 jcarousel-item-41-horizontal" jcarouselindex="41" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/180"><img src="./WWW.HEDIYYEM.AZ_files/76105_DSC_0604.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-42 jcarousel-item-42-horizontal" jcarouselindex="42" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/179"><img src="./WWW.HEDIYYEM.AZ_files/48946_DSC_0255.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-43 jcarousel-item-43-horizontal" jcarouselindex="43" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/178"><img src="./WWW.HEDIYYEM.AZ_files/68014_DSC_0251.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-44 jcarousel-item-44-horizontal" jcarouselindex="44" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/177"><img src="./WWW.HEDIYYEM.AZ_files/55937_DSC_0244.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-45 jcarousel-item-45-horizontal" jcarouselindex="45" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/176"><img src="./WWW.HEDIYYEM.AZ_files/6130_DSC_0236.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-46 jcarousel-item-46-horizontal" jcarouselindex="46" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/175"><img src="./WWW.HEDIYYEM.AZ_files/81539_DSC_0232.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-47 jcarousel-item-47-horizontal" jcarouselindex="47" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/174"><img src="./WWW.HEDIYYEM.AZ_files/62841_DSC_0229.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-48 jcarousel-item-48-horizontal" jcarouselindex="48" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/173"><img src="./WWW.HEDIYYEM.AZ_files/52953_DSC_0226.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-49 jcarousel-item-49-horizontal" jcarouselindex="49" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/172"><img src="./WWW.HEDIYYEM.AZ_files/83805_DSC_0223.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-50 jcarousel-item-50-horizontal" jcarouselindex="50" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/171"><img src="./WWW.HEDIYYEM.AZ_files/82748_DSC_0221.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-51 jcarousel-item-51-horizontal" jcarouselindex="51" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/170"><img src="./WWW.HEDIYYEM.AZ_files/32413_DSC_0166.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-52 jcarousel-item-52-horizontal" jcarouselindex="52" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/169"><img src="./WWW.HEDIYYEM.AZ_files/83217_DSC_0164.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-53 jcarousel-item-53-horizontal" jcarouselindex="53" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/168"><img src="./WWW.HEDIYYEM.AZ_files/79117_DSC_0161.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-54 jcarousel-item-54-horizontal" jcarouselindex="54" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/167"><img src="./WWW.HEDIYYEM.AZ_files/71461_DSC_0159.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-55 jcarousel-item-55-horizontal" jcarouselindex="55" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/166"><img src="./WWW.HEDIYYEM.AZ_files/13953_DSC_0153.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-56 jcarousel-item-56-horizontal" jcarouselindex="56" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/165"><img src="./WWW.HEDIYYEM.AZ_files/74326_DSC_0150.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-57 jcarousel-item-57-horizontal" jcarouselindex="57" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/164"><img src="./WWW.HEDIYYEM.AZ_files/47177_DSC_0146.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-58 jcarousel-item-58-horizontal" jcarouselindex="58" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/163"><img src="./WWW.HEDIYYEM.AZ_files/32951_DSC_0142.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-59 jcarousel-item-59-horizontal" jcarouselindex="59" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/162"><img src="./WWW.HEDIYYEM.AZ_files/59169_DSC_0139.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-60 jcarousel-item-60-horizontal" jcarouselindex="60" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/161"><img src="./WWW.HEDIYYEM.AZ_files/23715_DSC_0135.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-61 jcarousel-item-61-horizontal" jcarouselindex="61" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/160"><img src="./WWW.HEDIYYEM.AZ_files/86909_DSC_0128.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-62 jcarousel-item-62-horizontal" jcarouselindex="62" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/159"><img src="./WWW.HEDIYYEM.AZ_files/74998_DSC_0121.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-63 jcarousel-item-63-horizontal" jcarouselindex="63" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/158"><img src="./WWW.HEDIYYEM.AZ_files/13976_DSC_0119.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-64 jcarousel-item-64-horizontal" jcarouselindex="64" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/157"><img src="./WWW.HEDIYYEM.AZ_files/49640_DSC_0115.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-65 jcarousel-item-65-horizontal" jcarouselindex="65" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/156"><img src="./WWW.HEDIYYEM.AZ_files/13849_DSC_0113.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-66 jcarousel-item-66-horizontal" jcarouselindex="66" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/155"><img src="./WWW.HEDIYYEM.AZ_files/79531_DSC_0110.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-67 jcarousel-item-67-horizontal" jcarouselindex="67" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/154"><img src="./WWW.HEDIYYEM.AZ_files/86806_DSC_0088.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-68 jcarousel-item-68-horizontal" jcarouselindex="68" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/153"><img src="./WWW.HEDIYYEM.AZ_files/85158_DSC_0085.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-69 jcarousel-item-69-horizontal" jcarouselindex="69" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/152"><img src="./WWW.HEDIYYEM.AZ_files/60293_DSC_0077.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-70 jcarousel-item-70-horizontal" jcarouselindex="70" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/151"><img src="./WWW.HEDIYYEM.AZ_files/42788_DSC_0080.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-71 jcarousel-item-71-horizontal" jcarouselindex="71" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/150"><img src="./WWW.HEDIYYEM.AZ_files/94963_DSC_0071.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-72 jcarousel-item-72-horizontal" jcarouselindex="72" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/149"><img src="./WWW.HEDIYYEM.AZ_files/17033_DSC_0067.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-73 jcarousel-item-73-horizontal" jcarouselindex="73" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/148"><img src="./WWW.HEDIYYEM.AZ_files/29511_DSC_0064.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-74 jcarousel-item-74-horizontal" jcarouselindex="74" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/147"><img src="./WWW.HEDIYYEM.AZ_files/50619_DSC_0062.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-75 jcarousel-item-75-horizontal" jcarouselindex="75" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/146"><img src="./WWW.HEDIYYEM.AZ_files/37618_DSC_0012.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-76 jcarousel-item-76-horizontal" jcarouselindex="76" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/145"><img src="./WWW.HEDIYYEM.AZ_files/81693_DSC_0056.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-77 jcarousel-item-77-horizontal" jcarouselindex="77" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/144"><img src="./WWW.HEDIYYEM.AZ_files/20672_DSC_0051.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-78 jcarousel-item-78-horizontal" jcarouselindex="78" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/142"><img src="./WWW.HEDIYYEM.AZ_files/83645_DSC_0013.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-79 jcarousel-item-79-horizontal" jcarouselindex="79" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/141"><img src="./WWW.HEDIYYEM.AZ_files/43514_DSC_0015.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-80 jcarousel-item-80-horizontal" jcarouselindex="80" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/140"><img src="./WWW.HEDIYYEM.AZ_files/92754_DSC_0013.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-81 jcarousel-item-81-horizontal" jcarouselindex="81" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/139"><img src="./WWW.HEDIYYEM.AZ_files/36138_sahil DSC_0662.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-82 jcarousel-item-82-horizontal" jcarouselindex="82" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/138"><img src="./WWW.HEDIYYEM.AZ_files/51149_sahil DSC_0089.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-83 jcarousel-item-83-horizontal" jcarouselindex="83" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/135"><img src="./WWW.HEDIYYEM.AZ_files/47243_12 DSC_0009.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-84 jcarousel-item-84-horizontal" jcarouselindex="84" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/134"><img src="./WWW.HEDIYYEM.AZ_files/80511_DSC_0611.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-85 jcarousel-item-85-horizontal" jcarouselindex="85" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/132"><img src="./WWW.HEDIYYEM.AZ_files/54906_111DSC_0007 - Copy (2).jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-86 jcarousel-item-86-horizontal" jcarouselindex="86" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/129"><img src="./WWW.HEDIYYEM.AZ_files/58106_34 SC_0397.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-87 jcarousel-item-87-horizontal" jcarouselindex="87" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/128"><img src="./WWW.HEDIYYEM.AZ_files/39234_DSC_0405.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-88 jcarousel-item-88-horizontal" jcarouselindex="88" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/126"><img src="./WWW.HEDIYYEM.AZ_files/8016_DSC_0401.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-89 jcarousel-item-89-horizontal" jcarouselindex="89" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/125"><img src="./WWW.HEDIYYEM.AZ_files/4283_DSC_0399.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-90 jcarousel-item-90-horizontal" jcarouselindex="90" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/124"><img src="./WWW.HEDIYYEM.AZ_files/75385_DSC_0398.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-91 jcarousel-item-91-horizontal" jcarouselindex="91" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/121"><img src="./WWW.HEDIYYEM.AZ_files/43846_DSC_0389.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-92 jcarousel-item-92-horizontal" jcarouselindex="92" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/120"><img src="./WWW.HEDIYYEM.AZ_files/66355_DSC_0386.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-93 jcarousel-item-93-horizontal" jcarouselindex="93" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/119"><img src="./WWW.HEDIYYEM.AZ_files/19089_DSC_0384.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-94 jcarousel-item-94-horizontal" jcarouselindex="94" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/116"><img src="./WWW.HEDIYYEM.AZ_files/15340_DSC_0372.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-95 jcarousel-item-95-horizontal" jcarouselindex="95" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/115"><img src="./WWW.HEDIYYEM.AZ_files/68549_DSC_0369.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-96 jcarousel-item-96-horizontal" jcarouselindex="96" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/114"><img src="./WWW.HEDIYYEM.AZ_files/28822_DSC_0364.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-97 jcarousel-item-97-horizontal" jcarouselindex="97" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/113"><img src="./WWW.HEDIYYEM.AZ_files/45792_DSC_0356.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-98 jcarousel-item-98-horizontal" jcarouselindex="98" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/111"><img src="./WWW.HEDIYYEM.AZ_files/56769_DSC_0348.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-99 jcarousel-item-99-horizontal" jcarouselindex="99" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/110"><img src="./WWW.HEDIYYEM.AZ_files/69779_DSC_0345.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-100 jcarousel-item-100-horizontal" jcarouselindex="100" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/109"><img src="./WWW.HEDIYYEM.AZ_files/94578_DSC_0344.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-101 jcarousel-item-101-horizontal" jcarouselindex="101" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/108"><img src="./WWW.HEDIYYEM.AZ_files/71212_DSC_0336.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-102 jcarousel-item-102-horizontal" jcarouselindex="102" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/107"><img src="./WWW.HEDIYYEM.AZ_files/5196_DSC_0332.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-103 jcarousel-item-103-horizontal" jcarouselindex="103" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/104"><img src="./WWW.HEDIYYEM.AZ_files/54126_DSC_0328.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-104 jcarousel-item-104-horizontal" jcarouselindex="104" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/103"><img src="./WWW.HEDIYYEM.AZ_files/70193_DSC_0320.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-105 jcarousel-item-105-horizontal" jcarouselindex="105" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/102"><img src="./WWW.HEDIYYEM.AZ_files/28534_DSC_0319.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-106 jcarousel-item-106-horizontal" jcarouselindex="106" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/101"><img src="./WWW.HEDIYYEM.AZ_files/98528_DSC_0314.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-107 jcarousel-item-107-horizontal" jcarouselindex="107" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/100"><img src="./WWW.HEDIYYEM.AZ_files/81374_DSC_0312.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-108 jcarousel-item-108-horizontal" jcarouselindex="108" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/99"><img src="./WWW.HEDIYYEM.AZ_files/47778_DSC_0297.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-109 jcarousel-item-109-horizontal" jcarouselindex="109" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/98"><img src="./WWW.HEDIYYEM.AZ_files/35639_DSC_0295.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-110 jcarousel-item-110-horizontal" jcarouselindex="110" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/96"><img src="./WWW.HEDIYYEM.AZ_files/94161_DSC_0284.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-111 jcarousel-item-111-horizontal" jcarouselindex="111" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/95"><img src="./WWW.HEDIYYEM.AZ_files/76617_DSC_0272.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-112 jcarousel-item-112-horizontal" jcarouselindex="112" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/93"><img src="./WWW.HEDIYYEM.AZ_files/94833_DSC_0278.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-113 jcarousel-item-113-horizontal" jcarouselindex="113" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/91"><img src="./WWW.HEDIYYEM.AZ_files/91746_DSC_0270.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-114 jcarousel-item-114-horizontal" jcarouselindex="114" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/90"><img src="./WWW.HEDIYYEM.AZ_files/28395_DSC_0267.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-115 jcarousel-item-115-horizontal" jcarouselindex="115" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/85"><img src="./WWW.HEDIYYEM.AZ_files/66076_DSC_0175.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-116 jcarousel-item-116-horizontal" jcarouselindex="116" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/84"><img src="./WWW.HEDIYYEM.AZ_files/9754_DSC_0173.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-117 jcarousel-item-117-horizontal" jcarouselindex="117" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/83"><img src="./WWW.HEDIYYEM.AZ_files/80236_DSC_0212.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-118 jcarousel-item-118-horizontal" jcarouselindex="118" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/82"><img src="./WWW.HEDIYYEM.AZ_files/33907_DSC_0221.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-119 jcarousel-item-119-horizontal" jcarouselindex="119" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/81"><img src="./WWW.HEDIYYEM.AZ_files/25424_DSC_0169.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-120 jcarousel-item-120-horizontal" jcarouselindex="120" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/80"><img src="./WWW.HEDIYYEM.AZ_files/81793_DSC_0170.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-121 jcarousel-item-121-horizontal" jcarouselindex="121" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/74"><img src="./WWW.HEDIYYEM.AZ_files/91190_DSC_0165.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-122 jcarousel-item-122-horizontal" jcarouselindex="122" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/73"><img src="./WWW.HEDIYYEM.AZ_files/95554_6458_DSC_0163.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-123 jcarousel-item-123-horizontal" jcarouselindex="123" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/72"><img src="./WWW.HEDIYYEM.AZ_files/93053_9380_DSC_0162.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-124 jcarousel-item-124-horizontal" jcarouselindex="124" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/71"><img src="./WWW.HEDIYYEM.AZ_files/9745_DSC_0161.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-125 jcarousel-item-125-horizontal" jcarouselindex="125" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/70"><img src="./WWW.HEDIYYEM.AZ_files/66276_48881_DSC_0159.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-126 jcarousel-item-126-horizontal" jcarouselindex="126" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/69"><img src="./WWW.HEDIYYEM.AZ_files/29757_29268_DSC_0158.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-127 jcarousel-item-127-horizontal" jcarouselindex="127" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/68"><img src="./WWW.HEDIYYEM.AZ_files/69263_51512_DSC_0156.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-128 jcarousel-item-128-horizontal" jcarouselindex="128" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/67"><img src="./WWW.HEDIYYEM.AZ_files/48135_59503_DSC_0155.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-129 jcarousel-item-129-horizontal" jcarouselindex="129" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/66"><img src="./WWW.HEDIYYEM.AZ_files/94012_23783_DSC_0153.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-130 jcarousel-item-130-horizontal" jcarouselindex="130" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/63"><img src="./WWW.HEDIYYEM.AZ_files/19937_58135_14483_DSC_0150.jpg.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-131 jcarousel-item-131-horizontal" jcarouselindex="131" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/62"><img src="./WWW.HEDIYYEM.AZ_files/24703_84448_DSC_0149.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-132 jcarousel-item-132-horizontal" jcarouselindex="132" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/61"><img src="./WWW.HEDIYYEM.AZ_files/83665_27419_DSC_0138.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-133 jcarousel-item-133-horizontal" jcarouselindex="133" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/60"><img src="./WWW.HEDIYYEM.AZ_files/80737_DSC_0146.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-134 jcarousel-item-134-horizontal" jcarouselindex="134" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/59"><img src="./WWW.HEDIYYEM.AZ_files/25572_41021_DSC_0145.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-135 jcarousel-item-135-horizontal" jcarouselindex="135" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/58"><img src="./WWW.HEDIYYEM.AZ_files/97088_50717_DSC_0144.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-136 jcarousel-item-136-horizontal" jcarouselindex="136" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/57"><img src="./WWW.HEDIYYEM.AZ_files/56682_72320_DSC_0142.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-137 jcarousel-item-137-horizontal" jcarouselindex="137" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/56"><img src="./WWW.HEDIYYEM.AZ_files/57580_10445_DSC_0141.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-138 jcarousel-item-138-horizontal" jcarouselindex="138" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/54"><img src="./WWW.HEDIYYEM.AZ_files/15373_20028_DSC_0137.jpg.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-139 jcarousel-item-139-horizontal" jcarouselindex="139" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/53"><img src="./WWW.HEDIYYEM.AZ_files/50093_DSC_0164.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+     
+   <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-140 jcarousel-item-140-horizontal" jcarouselindex="140" style="float: left; list-style: none;"><a href="http://oyuncaqci.com/product/51"><img src="./WWW.HEDIYYEM.AZ_files/77375_DSC_0139.jpg_thumb.jpg" width="125" height="125" alt="image 01" border="0"></a></li>
+    </ul></div><div class="jcarousel-prev jcarousel-prev-horizontal" style="display: block;"></div><div class="jcarousel-next jcarousel-next-horizontal" style="display: block;"></div></div></div>
+<p></p>
+ </div>
+</div>
+ -->
+<!-- end of center slide -->
+
+<div class="blck_1 special" style="margin-top: -550px;">
+ <div class="title " style="background-color: #3B5998;color:white">
+  Axtar  <p class="lnk""></p>
+ </div>
+ <div class="wrap_m">
+  <p></p><form method="post" enctype="multipart/form-data">
+ <table id="param-search" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <colgroup><col width="30%">
+   <col width="70%">
+  </colgroup><tbody>
+
+   <tr id="producter">                        	
+    <td class="parametr-title" valign="middle" style="padding:0px 15px 0px 3px;">Məhsulların kateqoriyaları:</td>
+    <td class="gr parametr-values" nowrap="" style="padding-right:15px;">
+
+     <select id="category" name="root">
+       <option disabled="" selected="">Məhsulun adı</option>
+       <option value="78"> <p class="thin-font">SÜVENİRLƏR</p></option><option value="105"> SAATLAR</option><option value="107"> BİJUTERİYA</option><option value="119">  ŞƏKİL ÜÇÜN ÇƏRÇİVƏLƏR</option><option value="137"> OYUNCAQLAR</option><option value="139"> Xanımlar üçün gödəkcələr </option>      </select><select id="sub-category" size="1" name="sub">
+       <option value="0">Məhsulun kateqoriyası</option>
+      </select><table border="0" cellpadding="1" cellspacing="1">
+      <tbody><tr>
+      
+      
+
+
+   </tr>
+  </tbody></table>
+</td>
+</tr>				
+
+<tr id="producer_series_line" style="display:none;">
+ <td colspan="2"><p style="background-color:#ececeb;margin-top:5px;margin-bottom:8px;"><img src="./WWW.HEDIYYEM.AZ_files/sp.gif" width="100%" height="1"></p></td>
+</tr>
+<tr id="line1">
+ <td colspan="2"><p style="background-color:#ececeb;margin-top:5px;margin-bottom:8px;"><img src="./WWW.HEDIYYEM.AZ_files/sp.gif" width="100%" height="1"></p></td>
+</tr>
+
+<tr id="price">
+ <td class="gr parametr-title" style="padding:0px 40px 0px 3px;">Qiymət  :</td>
+ <td class="gr parametr-values" width="98%">
+  &nbsp;<input class="text" style="text-align: center" type="text" size="8" maxlength="10" name="price_from" value="MIN" onfocus="clearText(this)" onblur="clearText(this)">&nbsp;&nbsp;&nbsp;
+  -&nbsp;<input class="text" style="text-align: center" type="text" name="price_to" size="8" maxlength="10" value="MAX" onfocus="clearText(this)" onblur="clearText(this)">&nbsp;AZN.
+ </td>
+</tr>
+
+<tr id="line2">
+ <td colspan="2"><p style="background-color:#ececeb;margin-top:5px;margin-bottom:8px;"><img src="./WWW.HEDIYYEM.AZ_files/sp.gif" width="100%" height="1"></p></td>
+</tr>				
+
+<tr style="display: none;">
+ <td colspan="2"><p style="background-color:#ececeb;margin-top:5px;margin-bottom:8px;"><img src="./WWW.HEDIYYEM.AZ_files/sp.gif" width="100%" height="1"></p></td>
+</tr>
+
+<tr>
+ <td><input type="submit" name="reg" style="background-color: #3B5998" value="Axtar" class="actions"></td>
+</tr>
+
+</tbody></table>
+</form>
+
+<script type="text/javascript">
+ $("#category").change(function() {
+  $("#sub-category").load("site/other/filter.php", {id: $("#category option:selected").val()});
+ });
+</script><p></p>
+ </div>
+</div>
+
+
+<div class="blck_1 new_goods">
+ <div class="title title_5" style="background-color: #3B5998">Məhsulların siyahısı</div>
+ <div class="content">
+  
+  
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/242">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/93385_5196_DSC_0332.jpg.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/242" style="text-decoration:none; text">Dubaydan gətirilmiş, bəzəkli kül qabı</a>
+          <p style="color: red;font-size: 18px;">25AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(242)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/241">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/65691_9745_DSC_0161.jpg.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/241" style="text-decoration:none; text">Zövqünüzü oxşayacaq divar saatı</a>
+          <p style="color: red;font-size: 18px;">16AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(241)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/239">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/1984_4283_DSC_0399.jpg.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/239" style="text-decoration:none; display: block; height: 42px;">Qələm və brelok dəsti</a>
+          <p style="color: red;font-size: 18px;">6AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(239)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/238">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/71203_1009872_165929376922504_1291423974_n.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/238" style="text-decoration:none; display: block; height: 42px;">Orijinal at təsvirli suvenir</a>
+          <p style="color: red; font-size: 18px;">30AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(238)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+    </div>
+    <div style="height: 25px;"></div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/237">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/80687_998165_165933463588762_1442321055_n.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/237" style="text-decoration:none; text">Evinizi bəzəyəcək , məscid təsvirli divar saatı</a>
+          <p style="color: red; font-size: 18px;">20AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(237)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/236">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/47363_943275_165933203588788_1735015157_n.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/236" style="text-decoration:none; text">Evinizi bəzəyəcək orijinal divar saatı</a>
+          <p style="color: red; font-size: 18px;">17AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(236)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/234">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/9178_1064892_166115686903873_2007946450_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/234" style="text-decoration:none; display: block; height: 42px;">Gözmuncuğu və ləçəklərlə bəzədilmiş suvenir</a>
+          <p style="color: red; font-size: 18px;">10AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(234)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/233">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/6926_1063883_165929870255788_1844082280_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/233" style="text-decoration:none; display: block; height: 42px; font-size: 11.6px">Öz orijinallığı ilə seçilən, Dubaydan gətirilmiş ceyran təsvirli heykəl</a>
+          <p style="color: red; font-size: 18px;">55AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(233)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+    </div>
+    <div style="height: 25px;"></div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/232">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/32292_1271662_185284184987023_1989260310_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/232" style="text-decoration:none; text">Sevgililər üçün uyğun seçim .Unudulmaz xatirələrinizi xatırladacaq şəkil çərçivəsi</a>
+          <p style="color: red; font-size: 18px;">15AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(232)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/230">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/15594_1280455_183407821841326_717632882_n.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/230" style="text-decoration:none; text">Mərkəzi cüt ürək şəklində hazırlanmış kənarı qaşlarla bəzədilmiş 925 əyyarlı xalis gümüş bilərzik</a>
+          <p style="color: red; font-size: 18px;">17AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(230)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/229">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/12330_1276485_185297041652404_947207530_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/229" style="text-decoration:none; display: block; height: 83px;">Ürək şəklində hazırlanmış, şəkil çərçivəsi. Xatirələrinizi əbədiləşdirin</a>
+          <p style="color: red; font-size: 18px;">15AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(229)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/228">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/28807_1073703_183212465194195_1706382319_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/228" style="text-decoration:none; display: block; height: 83px;">Bəzək əşyalarınızı yerləşdirmək üçün uyğun seçim</a>
+          <p style="color: red; font-size: 18px;">10AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(228)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+    </div>
+    <div style="height: 25px;"></div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/237">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/80687_998165_165933463588762_1442321055_n.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/237" style="text-decoration:none; text">Evinizi bəzəyəcək , məscid təsvirli divar saatı</a>
+          <p style="color: red; font-size: 18px;">20AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(237)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/236">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/47363_943275_165933203588788_1735015157_n.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/236" style="text-decoration:none; text">Evinizi bəzəyəcək orijinal divar saatı</a>
+          <p style="color: red; font-size: 18px;">17AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(236)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/234">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/9178_1064892_166115686903873_2007946450_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/234" style="text-decoration:none; display: block; height: 42px;">Gözmuncuğu və ləçəklərlə bəzədilmiş suvenir</a>
+          <p style="color: red; font-size: 18px;">10AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(234)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/233">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/6926_1063883_165929870255788_1844082280_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/233" style="text-decoration:none; display: block; height: 42px; font-size: 11.6px">Öz orijinallığı ilə seçilən, Dubaydan gətirilmiş ceyran təsvirli heykəl</a>
+          <p style="color: red; font-size: 18px;">55AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(233)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+    </div>
+    <div style="height: 25px;"></div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/237">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/80687_998165_165933463588762_1442321055_n.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/237" style="text-decoration:none; text">Evinizi bəzəyəcək , məscid təsvirli divar saatı</a>
+          <p style="color: red; font-size: 18px;">20AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(237)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/236">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/47363_943275_165933203588788_1735015157_n.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/236" style="text-decoration:none; text">Evinizi bəzəyəcək orijinal divar saatı</a>
+          <p style="color: red; font-size: 18px;">17AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(236)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/234">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/9178_1064892_166115686903873_2007946450_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/234" style="text-decoration:none; display: block; height: 42px;">Gözmuncuğu və ləçəklərlə bəzədilmiş suvenir</a>
+          <p style="color: red; font-size: 18px;">10AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(234)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <a href="http://oyuncaqci.com/product/233">
+            <img width="170px;" src="./WWW.HEDIYYEM.AZ_files/6926_1063883_165929870255788_1844082280_o.jpg_thumb.jpg" alt="" />
+          </a>
+        </div>
+        <div class="row" style="text-align: center;" style="height: 52px;">
+          <div style="height: 5px;"></div>
+          <a href="http://oyuncaqci.com/product/233" style="text-decoration:none; display: block; height: 42px; font-size: 11.6px">Öz orijinallığı ilə seçilən, Dubaydan gətirilmiş ceyran təsvirli heykəl</a>
+          <p style="color: red; font-size: 18px;">55AZN</p>
+        </div>
+        <div class="row" style="text-align: center;">
+          <a onclick="add_to_cart(233)" class="buy_button">Səbətə əlavə et</a><br />
+          <div style="height: 10px;"></div>
+          <a href="http://oyuncaqci.com/basket" class="buy_now2">Indi al</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div><span>&nbsp;Səhifələr: </span>
+    <span><strong>1</strong> | <a href="http://oyuncaqci.com/razdel/0-2">2</a> | <a href="http://oyuncaqci.com/razdel/0-3">3</a> ... <a href="http://oyuncaqci.com/razdel/0-8">Digər səhifələr
+      </a>
+  </span>
+</div>
+
+   
+
+
+
+
+
+<p></p>
+ </div>
+</div>
+ 
+
+   </div>
+
+
+
+   <div id="prefooter"><br></div>
+
+   <div id="footer">
+
+    <div id="m_footer">
+
+     <ul>
+
+      <li style="font-family: 'Raleway', sans-serif;">Powered by Roadway</li>
+
+
+
+     </ul>
+
+    </div>
+
+   </div>
+
+
+
+  </div>
+
+ 
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <script src="script/owl.carousel.min.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>
